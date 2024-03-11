@@ -10,7 +10,7 @@ public:
             for(int j=0;j<b;j++){
                 if(order[i]==s[j]){
                     count++;
-                    s[j] = 'A';
+                    s[j]='A';
                 }
             }
             for(int k=0;k<count;k++){
