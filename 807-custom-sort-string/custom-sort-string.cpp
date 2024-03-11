@@ -3,7 +3,7 @@ public:
     string customSortString(string order, string s) {
        int a = order.size();
         int b = s.size();
-        // char x;
+        char x;
         string s1="";
         int count=0;
         for(int i=0;i<a;i++){
@@ -14,8 +14,8 @@ public:
                 }
             }
             for(int k=0;k<count;k++){
-                // x = order[i];
-                s1.push_back(order[i]);
+                x = order[i];
+                s1.push_back(x);
             }
             count=0;
         }
