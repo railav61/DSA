@@ -14,7 +14,7 @@ public:
                 }
             }
             for(int k=0;k<count;k++){
-                x = order[i];
+                x=order[i];
                 s1.push_back(x);
             }
             count=0;
