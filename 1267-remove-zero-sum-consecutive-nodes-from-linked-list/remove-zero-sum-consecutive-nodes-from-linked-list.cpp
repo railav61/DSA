@@ -11,10 +11,10 @@
 class Solution {
 public:
     ListNode* removeZeroSumSublists(ListNode* head) {
-        ListNode dummy(0, head);
+        ListNode temp(0, head);
     int prefix = 0;
     unordered_map<int, ListNode*> prefixToNode;
-    prefixToNode[0] = &dummy;
+    prefixToNode[0] = &temp;
 
     for (; head; head = head->next) {
       prefix += head->val;
@@ -23,11 +23,11 @@ public:
 
     prefix = 0;
 
-    for (head = &dummy; head; head = head->next) {
+    for (head = &temp; head; head = head->next) {
       prefix += head->val;
       head->next = prefixToNode[prefix]->next;
     }
 
-    return dummy.next;
+    return temp.next;
     }
 };
