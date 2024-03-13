@@ -1,7 +1,6 @@
 class Solution {
 public:
     int pivotInteger(int n) {
-        // vector<int> a;
         int a[n];
         int x=0,y=0;
         if(n==1){
@@ -11,9 +10,9 @@ public:
             a[i] = i+1;
         }
         for(int i=0;i<n;i++){
-            x+=a[i];
+            x=x+a[i];
             for(int j=i;j<n;j++){
-                y+=a[j];
+                y=y+a[j];
             }
             if(x==y){
                 return a[i];
