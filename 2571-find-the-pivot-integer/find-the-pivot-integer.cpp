@@ -3,7 +3,6 @@ public:
     int pivotInteger(int n) {
         vector<int> a;
         vector<int> b;
-        int x=0,y=0;
         if(n==1){
             return 1;
         }
