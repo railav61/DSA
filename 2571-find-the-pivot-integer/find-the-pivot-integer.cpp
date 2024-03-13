@@ -1,23 +1,26 @@
 class Solution {
 public:
     int pivotInteger(int n) {
-        int a[n];
+        vector<int> a;
+        vector<int> b;
         int x=0,y=0;
         if(n==1){
             return 1;
         }
         for(int i=0;i<n;i++){
-            a[i] = i+1;
+            a.push_back(i+1);
+        }
+        b=a;
+        for(int i=1;i<n;i++){
+            a[i]+=a[i-1];
+        }
+        for(int i=n-2;i>=0;i--){
+            b[i]+=b[i+1];
         }
         for(int i=0;i<n;i++){
-            x=x+a[i];
-            for(int j=i;j<n;j++){
-                y=y+a[j];
+            if(a[i]==b[i]){
+                return i+1;
             }
-            if(x==y){
-                return a[i];
-            }
-            y=0;
         }
         return -1;
     }
