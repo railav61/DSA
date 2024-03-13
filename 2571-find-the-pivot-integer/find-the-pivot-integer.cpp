@@ -1,13 +1,14 @@
 class Solution {
 public:
     int pivotInteger(int n) {
-        vector<int> a;
+        // vector<int> a;
+        int a[n];
         int x=0,y=0;
         if(n==1){
             return 1;
         }
         for(int i=0;i<n;i++){
-            a.push_back(i+1);
+            a[i] = i+1;
         }
         for(int i=0;i<n;i++){
             x+=a[i];
