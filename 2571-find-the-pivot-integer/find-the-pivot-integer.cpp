@@ -17,9 +17,7 @@ public:
             if(x==y){
                 return a[i];
             }
-            else{
-                y=0;
-            }
+            y=0;
         }
         return -1;
     }
